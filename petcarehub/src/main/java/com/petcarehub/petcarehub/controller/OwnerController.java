@@ -1,8 +1,7 @@
-package com.petcarehub.usermgmt;
+package com.petcarehub.petcarehub.controller;
+
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class UsermgmtController {
-
-
+public class OwnerController {
 }
