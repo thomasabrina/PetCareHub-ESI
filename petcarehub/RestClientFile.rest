@@ -1,3 +1,16 @@
+### List all owners
+GET http://localhost:8080/owners
+Content-Type: application/json
+
+###
+
+### Get an owner by ID
+GET http://localhost:8080/owners/{id}
+Content-Type: application/json
+
+###
+
+### Create a new owner
 POST http://localhost:8080/owners
 Content-Type: application/json
 
@@ -6,3 +19,75 @@ Content-Type: application/json
   "email": "alex@example.com",
   "address": "123 Main St"
 }
+
+###
+
+### Update an existing owner
+PUT http://localhost:8080/owners/{id}
+Content-Type: application/json
+
+{
+  "name": "Updated Name",
+  "email": "updated@example.com",
+  "address": "456 Main St"
+}
+
+###
+
+### Delete an owner
+DELETE http://localhost:8080/owners/{id}
+Content-Type: application/json
+
+###
+
+### List all pets
+GET http://localhost:8080/pets
+Content-Type: application/json
+
+###
+
+### Get a pet by ID
+GET http://localhost:8080/pets/{id}
+Content-Type: application/json
+
+###
+
+### Create a new pet
+POST http://localhost:8080/pets
+Content-Type: application/json
+
+{
+  "name": "Buddy",
+  "breed": "Labrador",
+  "age": 3,
+  "sex": "Male",
+  "owner":
+  {
+    "Owner ID Here" // Replace with actual owner ID
+  }
+}
+
+###
+
+### Update an existing pet
+PUT http://localhost:8080/pets/{id}
+Content-Type: application/json
+
+{
+  "name": "Updated Pet Name",
+  "breed": "Labrador",
+  "age": 4,
+  "sex": "Male",
+  "owner":
+  {
+    "Updated Owner ID Here" // Replace with actual owner ID
+  }
+}
+
+###
+
+### Delete a pet
+DELETE http://localhost:8080/pets/{id}
+Content-Type: application/json
+
+###
