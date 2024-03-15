@@ -1,5 +1,6 @@
 package com.petcarehub.petcarehub.service;
 
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
@@ -20,10 +21,12 @@ public class OwnerService {
         return ownerRepository.findById(id);
     }
 
+    @Transactional
     public Owner saveOwner(Owner owner) {
         return ownerRepository.save(owner);
     }
 
+    @Transactional
     public void deleteOwner(Long id) {
         ownerRepository.deleteById(id);
     }
