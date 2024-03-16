@@ -35,9 +35,15 @@ public class OwnerController {
     public ResponseEntity<Owner> updateOwner(@PathVariable Long id, @RequestBody Owner ownerDetails) {
         return ownerService.findOwnerById(id)
                 .map(owner -> {
-                    owner.setName(ownerDetails.getName());
-                    owner.setEmail(ownerDetails.getEmail());
-                    owner.setAddress(ownerDetails.getAddress());
+                    if (ownerDetails.getName() != null) {
+                        owner.setName(ownerDetails.getName());
+                    }
+                    if (ownerDetails.getEmail() != null) {
+                        owner.setEmail(ownerDetails.getEmail());
+                    }
+                    if (ownerDetails.getAddress() != null) {
+                        owner.setAddress(ownerDetails.getAddress());
+                    }
                     Owner updatedOwner = ownerService.saveOwner(owner);
                     return ResponseEntity.ok(updatedOwner);
                 })

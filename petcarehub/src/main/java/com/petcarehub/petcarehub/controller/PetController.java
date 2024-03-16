@@ -33,10 +33,18 @@ public class PetController {
     public ResponseEntity<Pet> updatePet(@PathVariable Long id, @RequestBody Pet petDetails) {
         return petService.findPetById(id)
                 .map(pet -> {
-                    pet.setName(petDetails.getName());
-                    pet.setBreed(petDetails.getBreed());
-                    pet.setSex(petDetails.getSex());
-                    pet.setAge(petDetails.getAge());
+                    if (petDetails.getName() != null) {
+                        pet.setName(petDetails.getName());
+                    }
+                    if (petDetails.getBreed() != null) {
+                        pet.setBreed(petDetails.getBreed());
+                    }
+                    if (petDetails.getSex() != null) {
+                        pet.setSex(petDetails.getSex());
+                    }
+                    if (petDetails.getAge() != null) {
+                        pet.setAge(petDetails.getAge());
+                    }
                     Pet updatedPet = petService.savePet(pet);
                     return ResponseEntity.ok(updatedPet);
                 })
