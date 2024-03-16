@@ -12,7 +12,7 @@ public class PetController {
     @Autowired
     private PetService petService;
 
-    @GetMapping("/getAll")
+    @GetMapping("/get-all")
     public Iterable<Pet> getAllPets() {
         return petService.findAllPets();
     }
@@ -24,12 +24,12 @@ public class PetController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping("/newPet")
+    @PostMapping("/new-pet")
     public Pet createPet(@RequestBody Pet pet) {
         return petService.savePet(pet);
     }
 
-    @PutMapping("/updatePet/{id}")
+    @PutMapping("/update-pet/{id}")
     public ResponseEntity<Pet> updatePet(@PathVariable Long id, @RequestBody Pet petDetails) {
         return petService.findPetById(id)
                 .map(pet -> {

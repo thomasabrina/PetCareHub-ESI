@@ -28,19 +28,19 @@ The application provides the following RESTful endpoints:
 
 ### Owners
 
-- **List all owners**: `GET /owners`
+- **List all owners**: `GET /owners/get-all`
 - **Get an owner by ID**: `GET /owners/{id}`
-- **Create a new owner**: `POST /owners`
-- **Update an existing owner**: `PUT /owners/{id}`
-- **Delete an owner**: `DELETE /owners/{id}`
+- **Create a new owner**: `POST /owners/new-owner`
+- **Update an existing owner**: `PUT /owners/update-owner/{id}`
+- **Delete an owner**: `DELETE /owners/delete/{id}`
 
 ### Pets
 
-- **List all pets**: `GET /pets`
+- **List all pets**: `GET /pets/get-all`
 - **Get a pet by ID**: `GET /pets/{id}`
-- **Create a new pet**: `POST /pets`
-- **Update an existing pet**: `PUT /pets/{id}`
-- **Delete a pet**: `DELETE /pets/{id}`
+- **Create a new pet**: `POST /pets/new-pet`
+- **Update an existing pet**: `PUT /pets/update-pet/{id}`
+- **Delete a pet**: `DELETE /pets/delete/{id}`
 
 ## Running the Tests
 
