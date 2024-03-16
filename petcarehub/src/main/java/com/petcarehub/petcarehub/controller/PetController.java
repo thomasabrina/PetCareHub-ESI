@@ -12,6 +12,11 @@ public class PetController {
     @Autowired
     private PetService petService;
 
+    @GetMapping("/getAll")
+    public Iterable<Pet> getAllPets() {
+        return petService.findAllPets();
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Pet> getPetById(@PathVariable Long id) {
         return petService.findPetById(id)
@@ -19,12 +24,12 @@ public class PetController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping("/newPet")
     public Pet createPet(@RequestBody Pet pet) {
         return petService.savePet(pet);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/updatePet/{id}")
     public ResponseEntity<Pet> updatePet(@PathVariable Long id, @RequestBody Pet petDetails) {
         return petService.findPetById(id)
                 .map(pet -> {
@@ -38,7 +43,7 @@ public class PetController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deletePet(@PathVariable Long id) {
         return petService.findPetById(id)
                 .map(pet -> {
@@ -46,11 +51,6 @@ public class PetController {
                     return ResponseEntity.ok().<Void>build();
                 })
                 .orElseGet(() -> ResponseEntity.notFound().build());
-    }
-
-    @GetMapping
-    public Iterable<Pet> getAllPets() {
-        return petService.findAllPets();
     }
 }
 

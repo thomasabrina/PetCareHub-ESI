@@ -14,7 +14,7 @@ public class OwnerController {
     @Autowired
     private OwnerService ownerService;
 
-    @GetMapping
+    @GetMapping("/getAll")
     public List<Owner> getAllOwners() {
         return ownerService.findAllOwners();
     }
@@ -26,12 +26,12 @@ public class OwnerController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping("/newOwner")
     public Owner createOwner(@RequestBody Owner owner) {
         return ownerService.saveOwner(owner);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/updateOwner/{id}")
     public ResponseEntity<Owner> updateOwner(@PathVariable Long id, @RequestBody Owner ownerDetails) {
         return ownerService.findOwnerById(id)
                 .map(owner -> {
@@ -44,7 +44,7 @@ public class OwnerController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteOwner(@PathVariable Long id) {
         return ownerService.findOwnerById(id)
                 .map(owner -> {
