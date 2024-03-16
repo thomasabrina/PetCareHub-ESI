@@ -5,15 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c51cab0-67a3-457c-8f9f-935aa470eb56" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/petcarehub/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/controller/OwnerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/controller/PetController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/repository/OwnerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/repository/PetRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petcarehub/RestClientFile.rest" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/service/OwnerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/service/PetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petcarehub/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petcarehub/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petcarehub/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petcarehub/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petcarehub/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/mvnw.cmd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petcarehub/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/usermgmt/Usermgmt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/usermgmt/UsermgmtController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/PetcarehubApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/PetcarehubApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/controller/OwnerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/controller/OwnerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/controller/PetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/controller/PetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/entities/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/entities/Owner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/entities/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/entities/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/repository/OwnerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/repository/OwnerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/repository/PetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/src/main/java/com/petcarehub/petcarehub/repository/PetRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/petcarehub/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/petcarehub/src/test/java/com/petcarehub/petcarehub/PetcarehubApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/petcarehub/src/test/java/com/petcarehub/petcarehub/PetcarehubApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +47,10 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="localRepository" value="D:\MavenRepository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../apache-maven-3.9.2" />
         <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.9.2\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -49,25 +62,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "D:/PetCareHub-ESI",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "85168111191dc8af10dea09ef17db9fc",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/PetCareHub-ESI&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;85168111191dc8af10dea09ef17db9fc&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="PetcarehubApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="petcarehub" />
@@ -87,11 +104,26 @@
       <updated>1710329048424</updated>
       <workItem from="1710329050072" duration="318000" />
       <workItem from="1710329711983" duration="823000" />
-      <workItem from="1710330732419" duration="2617000" />
+      <workItem from="1710330732419" duration="4227000" />
+      <workItem from="1710494925532" duration="18000" />
+      <workItem from="1710508720333" duration="793000" />
+      <workItem from="1710509525700" duration="2051000" />
+      <workItem from="1710512337049" duration="5565000" />
+      <workItem from="1710584447206" duration="34000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,8 +1,8 @@
 package com.petcarehub.petcarehub.entities;
 
-import jakarta.persistence.*;
 import lombok.Data;
 
+import javax.persistence.*;
 import java.util.NavigableMap;
 
 @Data
@@ -12,12 +12,17 @@ public class Pet {
     @Column(name = "name", nullable = false)
     private String name;
     @Id
-    @GeneratedValue
-    private String petId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long petId;
     @Column(name = "breed", nullable = false)
     private String breed;
     @Column(name = "age", nullable = false)
     private Integer age;
     @Column(name = "sex", nullable = false)
-    private Integer sex;
+    private String sex;
+    // Define Entity Relationship
+    @ManyToOne
+    @JoinColumn(name = "owner_id", nullable = false)
+    private Owner owner;
 }
+
