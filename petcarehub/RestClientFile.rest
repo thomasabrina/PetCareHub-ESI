@@ -1,5 +1,5 @@
 ### List all owners
-GET http://localhost:8080/owners
+GET http://localhost:8080/owners/get-all
 Content-Type: application/json
 
 ###
@@ -11,7 +11,7 @@ Content-Type: application/json
 ###
 
 ### Create a new owner
-POST http://localhost:8080/owners
+POST http://localhost:8080/owners/new-owner
 Content-Type: application/json
 
 {
@@ -23,7 +23,7 @@ Content-Type: application/json
 ###
 
 ### Update an existing owner
-PUT http://localhost:8080/owners/{id}
+PUT http://localhost:8080/owners/update-owner/{id}
 Content-Type: application/json
 
 {
@@ -35,13 +35,13 @@ Content-Type: application/json
 ###
 
 ### Delete an owner
-DELETE http://localhost:8080/owners/{id}
+DELETE http://localhost:8080/owners/delete/{id}
 Content-Type: application/json
 
 ###
 
 ### List all pets
-GET http://localhost:8080/pets
+GET http://localhost:8080/pets/get-all
 Content-Type: application/json
 
 ###
@@ -53,7 +53,7 @@ Content-Type: application/json
 ###
 
 ### Create a new pet
-POST http://localhost:8080/pets
+POST http://localhost:8080/pets/new-pet
 Content-Type: application/json
 
 {
@@ -70,7 +70,7 @@ Content-Type: application/json
 ###
 
 ### Update an existing pet
-PUT http://localhost:8080/pets/{id}
+PUT http://localhost:8080/pets/update-pet/{id}
 Content-Type: application/json
 
 {
@@ -87,7 +87,7 @@ Content-Type: application/json
 ###
 
 ### Delete a pet
-DELETE http://localhost:8080/pets/{id}
+DELETE http://localhost:8080/pets/delete/{id}
 Content-Type: application/json
 
 ###
