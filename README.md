@@ -24,7 +24,7 @@ The application should now be running and accessible at `http://localhost:8080`.
 
 ## Using the API
 
-The application provides the following RESTful endpoints:
+The application provides the following RESTful endpoints, with detailed documentation and interactive testing capabilities available through Swagger UI at `http://localhost:8080/swagger-ui/4.15.5/index.html`:
 
 ### Owners
 
@@ -38,6 +38,7 @@ The application provides the following RESTful endpoints:
 
 - **List all pets**: `GET /pets/get-all`
 - **Get a pet by ID**: `GET /pets/{id}`
+- **Get pets by owner ID**: `GET /owners/{id}/pets`
 - **Create a new pet**: `POST /pets/new-pet`
 - **Update an existing pet**: `PUT /pets/update-pet/{id}`
 - **Delete a pet**: `DELETE /pets/delete/{id}`
@@ -51,6 +52,7 @@ Explain how to run the automated tests for this system (if applicable).
 - [Spring Boot](https://spring.io/projects/spring-boot) - The web framework used
 - [Maven](https://maven.apache.org/) - Dependency Management
 - [PostgreSQL](https://www.postgresql.org/) - The database used
+- [Swagger UI](https://swagger.io/tools/swagger-ui/) - Used for API documentation and interactive testing
 
 ## License
 

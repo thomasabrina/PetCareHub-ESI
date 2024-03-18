@@ -97,3 +97,9 @@ GET http://localhost:8080/owners/{id}/pets
 Content-Type: application/json
 
 ###
+
+### Get pets by owner ID
+GET http://localhost:8080/owners/{id}/pets
+Content-Type: application/json
+
+###
