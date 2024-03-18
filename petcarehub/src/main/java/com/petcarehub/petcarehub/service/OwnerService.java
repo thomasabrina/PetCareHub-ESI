@@ -4,8 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
 import java.util.List;
+import java.util.Collections;
+import java.util.Set;
 
 import com.petcarehub.petcarehub.entities.Owner;
+import com.petcarehub.petcarehub.entities.Pet;
 import com.petcarehub.petcarehub.repository.OwnerRepository;
 
 @Service
@@ -26,5 +29,10 @@ public class OwnerService {
 
     public void deleteOwner(Long id) {
         ownerRepository.deleteById(id);
+    }
+
+    public Set<Pet> findPetsByOwnerId(Long ownerId) {
+        Optional<Owner> owner = findOwnerById(ownerId);
+        return owner.map(Owner::getPets).orElse(Collections.emptySet());
     }
 }

@@ -1,12 +1,14 @@
 package com.petcarehub.petcarehub.controller;
 
 import com.petcarehub.petcarehub.entities.Owner;
+import com.petcarehub.petcarehub.entities.Pet;
 import com.petcarehub.petcarehub.service.OwnerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @RequestMapping("/owners")
 @RestController
@@ -24,6 +26,15 @@ public class OwnerController {
         return ownerService.findOwnerById(id)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/{id}/pets")
+    public ResponseEntity<Set<Pet>> getPetsByOwnerId(@PathVariable Long id) {
+        Set<Pet> pets = ownerService.findPetsByOwnerId(id);
+        if (pets.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(pets);
     }
 
     @PostMapping("/new-owner")
